@@ -1,0 +1,11 @@
+{
+    "name": "css3-animations",
+    "version": "0.0.1",
+    "scripts": {
+        "start": "coffee app.coffee"
+    },
+    "dependencies": {
+        "express": "~3.3.4",
+        "coffee-script": "~1.7.1"
+    }
+}
