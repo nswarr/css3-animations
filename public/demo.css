@@ -1,0 +1,74 @@
+
+.demo-container {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: space-around;
+}
+
+.demo-container > section {
+    margin: 10px;
+    border: 2px solid black;
+    padding: 10px;
+}
+
+.spoiler {
+    color: black;
+    background-color: black;
+    font-size: 30px;
+    width: 5em;
+    height: 4em;
+    position:relative;
+    padding: 5px;
+}
+
+.spoiler:hover {
+    -webkit-animation: spoiler-reveal 2s normal;
+    -webkit-animation-fill-mode:forwards;
+}
+
+@-webkit-keyframes spoiler-reveal {
+    from{
+        color:black;
+    }
+
+    to {
+        color:white;
+    }
+}
+
+#spoiler-flip {
+    position: absolute;
+    top:0;
+    left:0;
+    color: white;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+
+    -webkit-transform-origin: 0% 0%;
+}
+
+.viewport {
+    -webkit-perspective: 400;
+    -webkit-perspective-origin-x: 50%;
+    -webkit-perspective-origin-y: 50%;
+}
+
+#spoiler-flip:hover {
+    -webkit-animation: spoiler-flip 1s normal;
+    -webkit-animation-fill-mode:forwards;
+}
+
+@-webkit-keyframes spoiler-flip {
+    0% {
+        background-color:black;
+        -webkit-transform:rotateX(0deg);
+    }
+
+    100% {
+        background-color:lightgray;
+        -webkit-transform:rotateX(180deg);
+    }
+}
+
