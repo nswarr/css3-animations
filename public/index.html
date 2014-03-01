@@ -3,67 +3,7 @@
 <head>
     <title></title>
     <script src="jquery.js" type="text/javascript"></script>
-    <style>
-        .container {
-            display: flex;
-            flex-flow: row nowrap;
-            justify-content: center;
-            align-items: stretch;
-
-            width: 1100px;
-            margin: 30px auto;
-        }
-
-        .container > section {
-            flex-grow: 1;
-            margin: 10px;
-            border: 2px solid black;
-            padding: 10px;
-        }
-
-        #reset-image-hint {
-            margin: 0px auto;
-            width: 15em;
-            padding: 9px;
-            text-align: center;
-            border: 2px solid #ebebeb;
-            background-color: gray;
-            border-radius: 10px;
-            z-index: 1000;
-        }
-
-        #viewport {
-            -webkit-perspective: 400;
-            -webkit-perspective-origin-x: 50%;
-            -webkit-perspective-origin-y: 50%;
-        }
-
-        .pulse-small {
-            transition: -webkit-transform 0.5s, opacity 0.8s;
-            -webkit-transform: scale(0.9);
-            opacity: 0.6;
-        }
-
-        .pulse-large {
-            -webkit-transform: scale(1);
-            opacity: 1;
-        }
-
-        img {
-            margin: 0px 50px;
-            z-index: 1;
-            transition: -webkit-transform 0.5s, -webkit-perspective 0.5s;
-            /*-webkit-transform-origin: 50% 50%;*/
-        }
-
-        input {
-            width:3em;
-        }
-        label {
-            display: block;
-        }
-
-    </style>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
@@ -141,17 +81,6 @@
         doTransform();
     }
 
-    function pulse(id) {
-        elm = $(id);
-        elm.addClass('pulse-small');
-
-        elm.on("transitionend", function(e){
-            elm.toggleClass('pulse-large');
-        });
-
-        setTimeout(function(){elm.addClass('pulse-large'), 1})
-    }
-
     var target = $('#transform-target');
     var inputs = $('#transforms input');
 
@@ -162,7 +91,6 @@
     });
 
     reset();
-    pulse("#reset-image-hint");
 
 </script>
 
