@@ -4,6 +4,7 @@
     flex-flow: row;
     justify-content: center;
     align-items: space-around;
+    margin-top: 80px;
 }
 
 .demo-container > section {
