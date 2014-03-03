@@ -73,3 +73,56 @@
     }
 }
 
+#progress-bar {
+    border: 1px solid #ebebeb;
+    border-radius: 3px;
+    width: 10em;
+    height:1.5em;
+    position: relative;
+    z-index: 2;
+}
+
+#progress-bar:after {
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width:0;
+    background-color: green;
+    color:white;
+    border-radius: 3px;
+    content: '';
+    z-index: 1;
+}
+
+#progress-bar.activated:after {
+    -webkit-animation: fill-to-right 2.5s;
+    -webkit-animation-fill-mode:forwards;
+}
+
+#progress-bar.activated:before {
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width:100%;
+    text-align: center;
+    padding: 3px;
+    z-index: 2;
+    content: 'Loading...';
+}
+
+@-webkit-keyframes fill-to-right {
+    10% {
+        width:10%;
+    }
+
+    40% {
+        width:40%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
