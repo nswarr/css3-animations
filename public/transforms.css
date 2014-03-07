@@ -39,7 +39,6 @@ label {
 
 img {
     margin: 0px 50px;
-    z-index: 1;
     transition: -webkit-transform 0.5s, -webkit-perspective 0.5s;
     -webkit-transform-origin: 50% 50%;
 }
