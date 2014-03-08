@@ -119,13 +119,12 @@
 }
 
 #threeD-viewport {
-    -webkit-perspective: 200;
+    -webkit-perspective: 300;
     -webkit-perspective-origin-x: 50%;
     -webkit-perspective-origin-y: 50%;
     position: relative;
-    width:200px;
-    height:200px;
-    margin: 0px auto;
+    width:100px;
+    padding: 10px;
 }
 
 #threeD-container {
@@ -142,8 +141,8 @@
     position: absolute;
     width:100px;
     height:100px;
-    top:10px;
-    left:10px;
+    top:0px;
+    left:0px;
     text-align: center;
 }
 
